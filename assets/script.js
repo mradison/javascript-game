@@ -1,6 +1,15 @@
-var passwordText = document.querySelector("#password");
+// var passwordText = document.querySelector("#password");
 
-function promptMe(){
+function generatePassword(){
+  // properties usually get some data
+// methods manipulate the data
+const upperCaseArr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(''); // ['A', 'B']
+const lowerCaseArr = "abcdefghijklmnopqrstuvwxyz".split('');
+const numericArr = "0123456789".split('');
+const specialCharacterArr = "@#$%^&*()_+{}[]<>|/-=".split('');
+
+let allCharacters = []
+
   let passwordLength = prompt("How long does your password need to be? (must be between 8 and 128 characters)");
 
   let lowerCase = confirm("Does it need to include lowercase letters? (select Ok for yes or Cancel for no")
@@ -19,67 +28,63 @@ function promptMe(){
 
   if (lowerCase == true) {
     console.log("needs lowercase letter")
+    // add lowercase arr to the final arr
+    allCharacters = allCharacters.concat(lowerCaseArr)
   }
-  else {
-    console.log("does not need lowercase letter")
-  }
+
 
   if (upperCase == true) {
     console.log("needs uppercase letter")
-  }
-  else {
-    console.log("does not need uppercase letter")
+    allCharacters = allCharacters.concat(upperCaseArr)
   }
 
   if (numeric == true) {
     console.log("needs a numeric character")
-  }
-  else {
-    console.log("does not need numeric character")
+    allCharacters = allCharacters.concat(numericArr)
   }
   
   if (specialCharacter == true) {
     console.log("needs a special character")
-  }
-  else {
-    console.log("does not need special character")
+    allCharacters = allCharacters.concat(specialCharacterArr)
   }
 
-  const upperCaseArr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const lowerCaseArr = "abcdefghijklmnopqrstuvwxyz";
-  const numericArr = "0123456789";
-  const specialCharacterOptions = "@#$%^&*()_+{}[]<>|/-=";
+  console.log(allCharacters)
 
-  const allCharacters = upperCase + lowerCase + numeric + specialCharacter;
-
-  function createPassword() {
-    let newPassword = "";
-    newPassword += upperCase[Math.floor(Math.random() * upperCase.length)];
-    newPassword += lowerCase[Math.floor(Math.random() * lowerCase.length)];
-    newPassword += numeric[Math.floor(Math.random() * numeric.length)];
-    newPassword += specialCharacterOptions[Math.floor(Math.random() * specialCharacterOptions.length)];
-
-    passwordText.value = newPassword;
-
+  for (let i = 0; i < passwordLength; i++) {
+    // Get a random letter
+    console.log(allCharacters[Math.floor(Math.random() * allCharacters.length)])
+    // combine them into a string
   }
+  //return what that final string is
+
+  // function createPassword() {
+  //   let newPassword = "";
+  //   // add on to the empty string, ABCDEF and find in the string of ABCDEFG a random number between 0 and undefined
+  //   newPassword += upperCaseArr[Math.floor(Math.random() * upperCaseArr.length)];
+  //   newPassword += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+  //   newPassword += numeric[Math.floor(Math.random() * numeric.length)];
+  //   newPassword += specialCharacterOptions[Math.floor(Math.random() * specialCharacterOptions.length)];
+
+  //   passwordText.value = newPassword;
+
+  // }
 
 
-  while(length > passwordLength.length){
-    newPassword += allCharacters[Math.floor(Math.random() * allCharacters.length)];
-  }
+  // while(length > passwordLength.length){
+  //   newPassword += allCharacters[Math.floor(Math.random() * allCharacters.length)];
+  // }
 
 }
 
 
 
 
-
 // Assignment Code
-/*    
+   
       var generateBtn = document.querySelector("#generate");
 
       // Write password to the #password input
-      /function writePassword() {
+      function writePassword() {
         var password = generatePassword();
         var passwordText = document.querySelector("#password");
 
@@ -89,7 +94,7 @@ function promptMe(){
 
       // Add event listener to generate button
       generateBtn.addEventListener("click", writePassword);
-*/
+
 
 
 /*GIVEN I need a new, secure password
