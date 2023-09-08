@@ -1,5 +1,3 @@
-// var passwordText = document.querySelector("#password");
-
 function generatePassword(){
   // properties usually get some data
 // methods manipulate the data
@@ -50,37 +48,28 @@ let allCharacters = []
 
   console.log(allCharacters)
 
+  var passwordStringArr = [];
+
   for (let i = 0; i < passwordLength; i++) {
     // Get a random letter
-    console.log(allCharacters[Math.floor(Math.random() * allCharacters.length)])
     // combine them into a string
+   var randomCharacter = (allCharacters[Math.floor(Math.random() * allCharacters.length)])
+   console.log(randomCharacter);
+   passwordStringArr.push(randomCharacter);
   }
-  //return what that final string is
 
-  // function createPassword() {
-  //   let newPassword = "";
-  //   // add on to the empty string, ABCDEF and find in the string of ABCDEFG a random number between 0 and undefined
-  //   newPassword += upperCaseArr[Math.floor(Math.random() * upperCaseArr.length)];
-  //   newPassword += lowerCase[Math.floor(Math.random() * lowerCase.length)];
-  //   newPassword += numeric[Math.floor(Math.random() * numeric.length)];
-  //   newPassword += specialCharacterOptions[Math.floor(Math.random() * specialCharacterOptions.length)];
+//Turn passwordStringArr into a string
 
-  //   passwordText.value = newPassword;
+let passwordString = passwordStringArr.join("");
 
-  // }
+console.log(passwordString);
 
+return passwordString; 
 
-  // while(length > passwordLength.length){
-  //   newPassword += allCharacters[Math.floor(Math.random() * allCharacters.length)];
-  // }
+//put it back into the DOM 
 
 }
 
-
-
-
-// Assignment Code
-   
       var generateBtn = document.querySelector("#generate");
 
       // Write password to the #password input
@@ -93,22 +82,4 @@ let allCharacters = []
       }
 
       // Add event listener to generate button
-      generateBtn.addEventListener("click", writePassword);
-
-
-
-/*GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page*/
+      generateBtn.addEventListener("click", writePassword); 
