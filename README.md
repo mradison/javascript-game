@@ -34,7 +34,44 @@ THEN the password is either displayed in an alert or written to the page
 
 ![image](https://github.com/mradison/javascript-game/assets/58490851/71e57900-8a26-4a8c-a36e-97bcae0b65f7)
 
+![image](https://github.com/mradison/javascript-game/assets/58490851/7eb5130a-271b-40d4-a956-9d2e5ca1d4c1)
+
+
 ## Review
+
+
+## Notes
+
+Here are the websites I used to help me with my assignment (I also got help from Instructor, TA and Tutor as well as AskBCS):
+
+https://www.google.com/search?q=how+to+turn+an+array+into+a+string&rlz=1C1VDKB_enUS1068US1069&oq=how+to+turn+an+array+into+&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBggBEEUYOTIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDg2MjBqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
+
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_concat
+
+https://www.w3schools.com/jsref/jsref_concat_array.asp
+
+https://www.youtube.com/watch?v=jj0YdPkmNus
+
+https://stackoverflow.com/questions/37287093/starting-a-javascript-prompt-after-a-button-is-clicked
+
+https://www.youtube.com/watch?v=kUDMxeTRk98
+
+https://www.youtube.com/watch?v=Xrsb9SiF3a8
+
+https://www.w3schools.com/jsref/met_win_confirm.asp
+
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm2
+
+https://www.w3schools.com/jsref/met_win_alert.asp
+
+https://www.w3schools.com/jsref/met_win_prompt.asp
+
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt
+
+https://www.youtube.com/watch?v=IbwZk431eFM
+
+
+
 
 
 
