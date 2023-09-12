@@ -1,7 +1,5 @@
 function generatePassword(){
-  // properties usually get some data
-// methods manipulate the data
-const upperCaseArr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(''); // ['A', 'B']
+const upperCaseArr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('');
 const lowerCaseArr = "abcdefghijklmnopqrstuvwxyz".split('');
 const numericArr = "0123456789".split('');
 const specialCharacterArr = "@#$%^&*()_+{}[]<>|/-=".split('');
@@ -26,7 +24,6 @@ let allCharacters = []
 
   if (lowerCase == true) {
     console.log("needs lowercase letter")
-    // add lowercase arr to the final arr
     allCharacters = allCharacters.concat(lowerCaseArr)
   }
 
@@ -51,14 +48,10 @@ let allCharacters = []
   var passwordStringArr = [];
 
   for (let i = 0; i < passwordLength; i++) {
-    // Get a random letter
-    // combine them into a string
    var randomCharacter = (allCharacters[Math.floor(Math.random() * allCharacters.length)])
    console.log(randomCharacter);
    passwordStringArr.push(randomCharacter);
   }
-
-//Turn passwordStringArr into a string
 
 let passwordString = passwordStringArr.join("");
 
@@ -66,13 +59,11 @@ console.log(passwordString);
 
 return passwordString; 
 
-//put it back into the DOM 
 
 }
 
       var generateBtn = document.querySelector("#generate");
 
-      // Write password to the #password input
       function writePassword() {
         var password = generatePassword();
         var passwordText = document.querySelector("#password");
@@ -81,5 +72,4 @@ return passwordString;
 
       }
 
-      // Add event listener to generate button
       generateBtn.addEventListener("click", writePassword); 
