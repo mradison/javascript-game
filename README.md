@@ -36,6 +36,9 @@ THEN the password is either displayed in an alert or written to the page
 
 ![image](https://github.com/mradison/javascript-game/assets/58490851/7eb5130a-271b-40d4-a956-9d2e5ca1d4c1)
 
+https://mradison.github.io/javascript-password-generator/
+
+https://github.com/mradison/javascript-password-generator
 
 ## Review
 
