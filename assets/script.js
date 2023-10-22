@@ -7,6 +7,9 @@ const specialCharacterArr = "@#$%^&*()_+{}[]<>|/-=".split('');
 let allCharacters = []
 
   let passwordLength = prompt("How long does your password need to be? (must be between 8 and 128 characters)");
+  if (passwordLength < 8 || passwordLength >128) {
+    return;
+  }
 
   let lowerCase = confirm("Does it need to include lowercase letters? (select Ok for yes or Cancel for no")
 
